@@ -15,7 +15,7 @@
     </div>
     <div class="col-sm-4"> 
       <img src="image/call.png" class="img-responsive" style="width:60%" alt="Image">
-      <p style="font-weight: bold; font-size: medium; color: #000000">Mobile No.8469510509</p>    
+      <p style="font-weight: bold; font-size: medium; color: #000000">Mobile No.8469510509 , 846951423 </p>    
     </div>
       <div class="col-sm-4"> 
       <img src="image/mail.jpg" class="img-responsive" style="width:60%" alt="Image">
