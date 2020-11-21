@@ -1,0 +1,146 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="fruits.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Fruit Products Selling </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+   
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+       
+      margin-bottom: 20px;
+      background-color:#000000;
+      font-family:Calibri;
+      font-size:medium;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+     
+     
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #df8a11;
+      
+      padding: 10px;
+    }
+  </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <img src="image/frute.jpg" style="background-position: center center; width:100%; height:180px; right: auto; bottom: auto; left: auto;">
+  <div class="container text-center">
+    
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        
+<%--            <li><a href="home.aspx">Home</a></li>--%>
+
+       <%-- <li><a href="home.aspx" ><span class="glyphicon glyphicon-home"></span> </a></li> --%>
+        <%--<li><a href="#">Products</a></li>--%>
+        
+          <%-- <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Mango</a></li>
+            <li><a href="#">Orange</a></li>
+            <li><a href="#">Guava</a></li> 
+          </ul>
+        </li>
+       
+        <li><a href="contectus.aspx">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="login.aspx"><span class="glyphicon glyphicon-log-in"> Login</a></li>
+        <li><a href="registration.aspx"><span class="glyphicon glyphicon-user">Registration</span> </a></li>
+
+          </ul>--%>   
+   
+           <li  id="home" runat="server"><a href="home.aspx">Home</a></li>
+                        <li id="product" runat="server" visible="True"><a href="fruitproduct.aspx">Fruit Products</a></li>
+              <%--<li class="dropdown" id="product" runat="server" visible="true">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products
+         --%> <%--<span class="caret"></span></a>--%>
+                           <%-- <ul class="dropdown-menu" style="background-color:#808080;">
+                                <li><a href="#">mango</a></li>
+                                <li><a href="#">guava</a></li>
+                                <li><a href="#">amla</a></li>
+                            </ul>
+                        </li>--%>
+                        <li id="product1" runat="server" visible="false"><a href="homeproduct.aspx">Products</a></li>
+                        <li id="contact" runat="server"><a href="Contectus.aspx">Contact</a></li>
+                        <li id="pro" runat="server" visible="false"><a href="addtocart.aspx"> <asp:Label ID="Labelitem" Font-Bold="true" Font-Size="Larger" ForeColor="#ffffff" runat="server" Text="Label"></asp:Label><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
+                        <li id="home2" runat="server" visible="false"><a href="admin.aspx">Home</a></li>
+                        <%--<li id="home1" runat="server" visible="false"><a href="registerduser.aspx">User Detail</a></li>--%>
+                        <li id="regdetails" runat="server" visible="false"><a href="registerdetails.aspx">User Detail</a></li>
+                       <%-- <li id="status" runat="server" visible="false"><a href="userregstatus.aspx">Useruserregstatus</a></li>
+           --%>             
+           <li id="report" runat="server" visible="false"><a href="report.aspx">Quantity Report</a></li>
+          <li id="order" runat="server" visible="false"><a href="order.aspx">Order Report</a></li>
+                       
+
+          <li id="lnk1" runat="server" visible="false"><a href="addproduct.aspx">Add Products</a>
+                              
+                        </li>
+
+                        <li id="lnk2" runat="server" visible="false"><a href="manageproduct.aspx">Manage Products</a></li>
+
+                    </ul>
+
+
+      <ul class="nav navbar-nav navbar-right">
+        <li  id="reg" runat="server"><a href="registration.aspx"><span class="glyphicon glyphicon-user"></span> Registration</a></li>
+        <li id="login" runat="server"><a href="login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <asp:Label ID="u_n" runat="server" Text="" Visible="false"></asp:Label>
+                        <li id="logout" runat="server" visible="false"><a href="logout.aspx">
+                            <span class="glyphicon glyphicon-log-in"></span>logout</a></li>
+      </ul>
+          
+          </div>
+  </div>
+</nav>
+   
+
+         <div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder></div>
+ 
+        <br />
+<footer class="container-fluid text-center" >
+  <p style="font-weight: bold; color:#841c06; font-size: medium; height:40px">Developed By Rashmi Patel</p>
+</footer>
+   
+
+           </form>
+</body>
+</html>
